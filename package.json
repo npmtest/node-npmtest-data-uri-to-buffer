@@ -1,1 +1,39 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-data-uri-to-buffer",     "homepage": "https://github.com/npmtest/node-npmtest-data-uri-to-buffer",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-data-uri-to-buffer.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [data-uri-to-buffer (v0.0.4)](https://github.com/TooTallNate/node-data-uri-to-buffer)  [![npm package](https://img.shields.io/npm/v/npmtest-data-uri-to-buffer.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-data-uri-to-buffer) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-data-uri-to-buffer.svg)](https://travis-ci.org/npmtest/node-npmtest-data-uri-to-buffer)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-data-uri-to-buffer",
+    "keywords": [
+        "coverage",
+        "test",
+        "data-uri-to-buffer"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_data_uri_to_buffer.js",
+    "name": "npmtest-data-uri-to-buffer",
+    "nameAlias": "npmtest_data_uri_to_buffer",
+    "nameOriginal": "npmtest-data-uri-to-buffer",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-data-uri-to-buffer.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
